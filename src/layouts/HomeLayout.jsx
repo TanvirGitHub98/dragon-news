@@ -1,14 +1,14 @@
 import React from "react";
-import logo from "../assets/logo.png";
+import Header from "../components/Header/Header";
+import LatestNews from "../components/LatestNews/LatestNews";
+
 
 const HomeLayout = () => {
   return (
     <div>
       <header>
-        <div className="flex justify-center items-center flex-col gap-3 mt-3">
-          <img className="w-[450px]" src={logo} alt="header Logo" />
-          <p>Journalism Without Fear or Favour</p>
-        </div>
+       <Header></Header>
+       <LatestNews></LatestNews>
       </header>
       <main>
         <section className="left-nav"></section>
