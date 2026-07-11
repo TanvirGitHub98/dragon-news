@@ -6,7 +6,7 @@ const Marquee = FromMarquee.default || FromMarquee;
 
 const LatestNews = () => {
   return (
-    <div className="flex items-center w-11/12 mx-auto gap-2 bg-base-200 p-3 my-3">
+    <div className="flex items-center gap-2 bg-base-200 p-3 my-3">
       <p className="bg-secondary text-base-100 px-3 py-2">Latest</p>
       <Marquee pauseOnHover={true} >
         <p>
