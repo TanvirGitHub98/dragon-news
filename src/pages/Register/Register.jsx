@@ -11,13 +11,13 @@ const Register = () => {
             {/* Name */}
             <label className="label">Your Name</label>
             <input
-              type="email"
+              type="text"
               className="input"
               placeholder="Enter your name"
             />
             {/* photo url */}
             <label className="label">Photo URL</label>
-            <input type="email" className="input" placeholder="Photo url" />
+            <input type="text" className="input" placeholder="Photo url" />
             {/* Email */}
             <label className="label">Email</label>
             <input type="email" className="input" placeholder="Email" />
