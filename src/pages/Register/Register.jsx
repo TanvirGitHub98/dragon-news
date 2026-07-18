@@ -13,7 +13,7 @@ const Register = () => {
     createUser(email,password)
     .then(userCredential=>{
       setUser(userCredential.user)
-      console.log(user)
+      
 
     })
     .catch(error=>{
