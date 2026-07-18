@@ -1,8 +1,10 @@
 import React, { use } from "react";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Login = () => {
+  const location=useLocation()
+  const navigate=useNavigate();
   const {signIn,setUser}=use(AuthContext)
   const handleSignIn=(e)=>{
     e.preventDefault();
@@ -12,6 +14,7 @@ const Login = () => {
     .then((userCredential)=>{
       setUser(userCredential.user)
       alert("User Login Successfully")
+      navigate(`/${location.state? location.state:'/'}`)
 
     })
     .catch((error)=>{
@@ -33,7 +36,7 @@ const Login = () => {
             <div>
               <a className="link link-hover">Forgot password?</a>
             </div>
-            <button type="submit" className="btn btn-neutral mt-4"><Link to='/'>Login</Link></button>
+            <button type="submit" className="btn btn-neutral mt-4">Login</button>
           </fieldset>
           <p>Dont’t Have An Account ? <span className="text-red-500"><Link to="/auth/register">Register</Link></span></p>
         </form>
